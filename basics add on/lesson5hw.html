@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=
+  , initial-scale=1.0" />
+
+    <title>Dark Theme 🌚</title>
+</head>
+
+<style>
+    button {
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+
+    .dark {
+        background-color: black;
+    }
+
+    .dark button {
+        background-color: white;
+        color: black;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <button>Dark Theme</button>
+</body>
+
+<script>
+    function darkMode() {
+        let body = document.querySelector("body");
+        body.classList.add("dark");
+    }
+
+    let darkButton = document.querySelector("button");
+
+    darkButton.addEventListener("click", darkMode);
+</script>
+
+</html>
