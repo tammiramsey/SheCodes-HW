@@ -15,6 +15,19 @@
     background-color: #fcf8f3;
    }
 
+   .container {
+    max-width: 700px;
+    background-color: #ffd3b6;
+    padding: 25px;
+    border-radius: 10px;
+    margin:auto
+   }
+
+   img {
+    max-width: 100%;
+    border-radius: 10px;
+   }
+
    h1 {
     color:#698474;
     text-align: center;
@@ -25,11 +38,46 @@
     text-align: center;
    }
 
+   p {
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+
+   button {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ffaaa5;
+    background-color: #698474;
+    color: #fcf8f3;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    transition: all 200ms ease-in-out;
+   }
+
+   button:hover {
+    background-color: #ffaaa5;
+    color: #698474;
+    cursor: pointer;
+   }
+
+   footer { 
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+
+   .darkMode {
+    background-color: #6B696B;
+    color: #fcf8f3;
+    border: 3px solid #698474;
+   }
+
 </style>
 
 <body>
-    <button>Dark Mode</button>
-
+    <div class = "container">
     <h1>Knitting</h1>
 
     <h2>One of my creative hobbies</h2>
@@ -46,7 +94,7 @@
         alt="wall of yarn arranged in a gradient rainbow">
 
     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/161/original/tanaphong-toochinda-WddCult7llk-unsplash.jpg?1685720247"
-        alt="close up of hands knitting a project with a variegated yard of peach tree colors ranging from peachy pinks to leafy greens"
+        alt="close up of hands knitting a project with a variegated yard of peach tree colors ranging from peachy pinks to leafy greens">
         <p>
     Knitting is a method for production of textile fabrics by interlacing yarn loops with loops of the same or other
     yarns.
@@ -55,10 +103,17 @@
     loops of yarn in a row, either flat or in the round.
     </p>
 
+    <p>Read more on <a href="https://en.wikipedia.org/wiki/Knitting"> Wikipedia</a></p>
+
     <button>Learn to Knit</button>
 
     <footer>🧶 Coded by <a href="https://github.com/tammiramsey" target="
         ">Tammi Ramsey</a>🧣 </footer>
+    </div>
+
+    <br>
+    <br>
+    <button class="darkMode">See this page in Dark Mode</button>
 </body>
 
 </html>
