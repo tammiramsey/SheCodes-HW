@@ -30,7 +30,7 @@
 
     .knittingIG {
         transition: all 150ms ease-in-out;
-        width: 100%;   
+        width: 100%;
     }
 
     .knittingIG:hover {
@@ -42,14 +42,14 @@
         color: #698474;
         text-align: center;
         font-size: 52px;
-        text-shadow: 1px 1px #fcf8f3;
+        text-shadow: 2px 2px #fcf8f3;
     }
 
     h2 {
-        color: #ffaaa5;
+        color: #302939;
         text-align: center;
         font-size: 35px;
-        text-shadow: 1px 1px #698474;
+        text-shadow: 2px 2px #ffaaa5;
     }
 
     .grid {
@@ -61,6 +61,12 @@
 
     .grid img {
         width: 100%;
+        transition: all 150ms ease-in-out;
+    }
+
+    .grid img:hover {
+        opacity: 0.9;
+        transform: scale(1.1);
     }
 
     p {
@@ -92,6 +98,11 @@
         transform: scale(1.2);
     }
 
+    .learn a {
+        text-decoration: none;
+        color: #fcf8f3
+    }
+
     footer {
         text-align: center;
         padding: 15px;
@@ -104,10 +115,32 @@
         transform: scale(1.2);
     }
 
-    .darkMode {
+    .darkModeButton {
         background-color: #6B696B;
         color: #fcf8f3;
         border: 3px solid #698474;
+    }
+
+    .darkMode {
+        background-color: #302939;
+        color: #ffaaa5;
+    }
+
+    .darkMode .container {
+        background-color: #363c3e;
+    }
+
+    .darkMode a {
+        color: #ffd8d8;
+    }
+
+    .darkMode h1 {
+        color: #ffaaa5;
+        ;
+    }
+
+    .darkMode h2 {
+        color: #ffd8d8;
     }
 </style>
 
@@ -135,20 +168,34 @@
 
             <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/363/original/pexels-antoni-shkraba-5467465.jpg?1685843386"
                 alt="white woman in a white linen shirt holding four skeins of yarn">
-        
+
         </div>
         <p>
             Knitting is a method for production of textile fabrics by interlacing yarn loops with loops of the same or
-            other
-            yarns.
-            It is used to create many types of garments. Knitting may be done by hand or by machine. Knitting creates
-            stitches:
-            loops of yarn in a row, either flat or in the round.
+            other yarns. It is used to create many types of garments. Knitting may be done by hand or by machine.
+            Knitting creates
+            stitches: loops of yarn in a row, either flat or in the round.
+            <br>
+            <br>
+            I don't remember exactly who first taught me to knit; either my mother or grandmother was my first knitting
+            teacher.
+            Since my early years, I have had the skills to knit, and have continued to refine my skills. I like to shop
+            for yarn,
+            as it almost feels like I am searching for new paint colors. At this point on my knitting journey, I have
+            made nearly
+            2 dozen baby blankets, multiple scarves and shawls, a few baby and kid sized articles of clothing for my
+            children, and
+            two pairs of socks for myself. You can see the first sock I ever made in the top photo, on attempt four or
+            five
+            in getting the sizing right. I like to continue to challenge myself with new projects, and can't wait to see
+            where my
+            fiber journey takes me next!
         </p>
 
         <p class="info">Read more on <a href="https://en.wikipedia.org/wiki/Knitting"> Wikipedia</a></p>
 
-        <button>Learn to Knit</button>
+        <button class="learn"><a href="https://www.youtube.com/watch?v=p_R1UDsNOMkLearn" target="_blank">Learn to
+                Knit</a></button>
 
         <footer>🧶 Coded by <a href="https://github.com/tammiramsey" target="
         ">Tammi Ramsey</a>🧣 </footer>
@@ -156,7 +203,23 @@
 
     <br>
     <br>
-    <button class="darkMode">See this page in Dark Mode</button>
+    <button class="darkModeButton">Change Page Mode</button>
+
+    <script>
+        function changeMode() {
+            let body = document.querySelector("body");
+            if (body.classList.contains("darkMode")) {
+                body.classList.remove("darkMode");
+            }
+            else {
+                body.classList.add("darkMode");
+            }
+        }
+
+        let theme = document.querySelector(".darkModeButton")
+        theme.addEventListener('click', changeMode)
+
+    </script>
 </body>
 
 </html>
