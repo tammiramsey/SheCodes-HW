@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-10-year-range.min.js"></script>
 
     <title>Basics HW 1</title>
 </head>
@@ -20,17 +21,17 @@
         <option value="Australia/Sydney">Sydney 🇦🇺</option>
     </select>
     <script>
+        function displayDate(event) {
+            if (event.target.value.length > 0) {
+                let currentTime = moment().tz(event.target.value).format("dddd, MMMM D, YYYY h:mm A");
 
-    function displayDate(event) {
-        if (event.target.value.length > 0) {
-            let currentTime = moment().tz(event.target.value).format("dddd, MMMM D, YYYY h:mm A");
-
-            alert(`It is ${currentTime} in ${event.target.value}`);
+                alert(`It is ${currentTime} in ${event.target.value}`);
+            }
         }
-    }
 
-    let selectElement = document.querySelector("#city");
-    selectElement.addEventListener("change", displayDate);
-
+        let selectElement = document.querySelector("#city");
+        selectElement.addEventListener("change", displayDate);
     </script>
 </body>
+
+</html>
