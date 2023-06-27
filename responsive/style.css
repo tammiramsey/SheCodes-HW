@@ -19,7 +19,7 @@ h3 {
 }
 
 h1 {
-    font-size: 96px;
+    font-size: 72px;
 }
 
 h2 {
@@ -57,12 +57,13 @@ p {
 .contact {
     background: var(--primary-color);
     box-shadow: var(--box-shadow);
-    color: white;
+    color: var(--secondary-color)
 }
 
 .about {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
+    box-shadow: var(--box-shadow);
 }
 
 .homepage-link {
